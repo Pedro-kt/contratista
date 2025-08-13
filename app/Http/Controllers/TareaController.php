@@ -91,4 +91,10 @@ class TareaController extends Controller
         $tarea->delete();
         return redirect()->route('tareas.index')->with('success', 'Tarea eliminada exitosamente');
     }
+
+    public function editTwo(Tarea $tarea)
+    {
+        return view('tareas.edit', compact('tarea'));
+    }
+
 }
